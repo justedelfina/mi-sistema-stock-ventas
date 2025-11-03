@@ -162,18 +162,14 @@ def main():
     if choice == "Dashboard Principal":
         show_dashboard(products, sales, stock_data)
 
-
     elif choice == "Gestión de Productos":
         show_product_management(system, products, categories)
-
 
     elif choice == "Control de Stock":
         show_stock_management(system, products, stock_data)
 
-
     elif choice == "Registro de Ventas":
         show_sales_management(system, products, sales, stock_data)
-
 
     elif choice == "Reportes y Estadísticas":
         show_reports(products, sales, stock_data)
@@ -260,10 +256,15 @@ def show_product_management(system, products, categories):
                 description = st.text_area("Descripción")
                 initial_stock = st.number_input("Stock Inicial", min_value=0, value=0)
 
-            # Sistema de categorías MEJORADO - SIMPLIFICADO
+            # Sistema de categorías CORREGIDO
             st.write("**Categoría del Producto:**")
 
-            # Opción 1: Seleccionar categoría existente
+            # Inicializar variables
+            existing_category = ""
+            new_category = ""
+            final_category = ""
+
+            # Opción 1: Seleccionar categoría existente (solo si hay categorías)
             if categories:
                 st.write("**Categorías existentes:**")
                 existing_category = st.selectbox(
@@ -271,6 +272,8 @@ def show_product_management(system, products, categories):
                     options=[""] + categories,
                     key="existing_category"
                 )
+            else:
+                st.info("📝 No hay categorías existentes. Crea una nueva categoría.")
 
             # Opción 2: Crear nueva categoría - SIEMPRE VISIBLE
             st.write("**O crear nueva categoría:**")
@@ -280,13 +283,13 @@ def show_product_management(system, products, categories):
                 key="new_category"
             )
 
-            # Determinar qué categoría usar
-            final_category = ""
+            # Determinar qué categoría usar (CORREGIDO)
             if new_category and new_category.strip():
                 final_category = new_category.strip()
             elif existing_category:
                 final_category = existing_category
 
+            # Botón de submit CORREGIDO - debe estar DENTRO del form
             submitted = st.form_submit_button("Agregar Producto")
 
             if submitted:
@@ -322,15 +325,15 @@ def show_product_management(system, products, categories):
                 else:
                     st.error("❌ Por favor completa los campos obligatorios (*)")
 
-            # Mostrar ayuda
-            with st.expander("ℹ️ Ayuda sobre categorías"):
-                st.write("""
-               **Cómo usar las categorías:**
-               - **Selecciona una categoría existente** del menú desplegable
-               - **O escribe una nueva categoría** en el campo de texto
-               - Las nuevas categorías se guardan automáticamente para usarlas después
-               - Si escribes una nueva categoría, esta tendrá prioridad sobre la seleccionada
-               """)
+        # Mostrar ayuda (fuera del form)
+        with st.expander("ℹ️ Ayuda sobre categorías"):
+            st.write("""
+            **Cómo usar las categorías:**
+            - **Selecciona una categoría existente** del menú desplegable
+            - **O escribe una nueva categoría** en el campo de texto
+            - Las nuevas categorías se guardan automáticamente para usarlas después
+            - Si escribes una nueva categoría, esta tendrá prioridad sobre la seleccionada
+            """)
 
     with tab2:
         st.subheader("Lista de Productos")
