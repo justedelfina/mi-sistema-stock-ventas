@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "date": "2025-10-22T20:18:15.513597",
+    "products": [
+      {
+        "product_id": 2,
+        "name": "Lapicera Bic Negra",
+        "price": 500.0,
+        "quantity": 5,
+        "subtotal": 2500.0
+      }
+    ],
+    "total": 2500.0,
+    "items_count": 5
+  },
+  {
+    "id": 2,
+    "date": "2025-10-22T20:29:31.479267",
+    "products": [
+      {
+        "product_id": 1,
+        "name": "Lapicera Bic Azul",
+        "price": 500.0,
+        "quantity": 4,
+        "subtotal": 2000.0
+      }
+    ],
+    "total": 2000.0,
+    "items_count": 4
+  },
+  {
+    "id": 3,
+    "date": "2025-10-22T20:35:07.862676",
+    "products": [
+      {
+        "product_id": 4,
+        "name": "Cuaderno Exito Azul",
+        "price": 5500.0,
+        "quantity": 3,
+        "subtotal": 16500.0
+      }
+    ],
+    "total": 16500.0,
+    "items_count": 3
+  },
+  {
+    "id": 4,
+    "date": "2025-10-22T20:37:56.093847",
+    "products": [
+      {
+        "product_id": 6,
+        "name": "Mochilas Tralalero Tralala",
+        "price": 35000.0,
+        "quantity": 2,
+        "subtotal": 70000.0
+      },
+      {
+        "product_id": 3,
+        "name": "Cuaderno Exito Verde",
+        "price": 5500.0,
+        "quantity": 4,
+        "subtotal": 22000.0
+      },
+      {
+        "product_id": 2,
+        "name": "Lapicera Bic Negra",
+        "price": 500.0,
+        "quantity": 3,
+        "subtotal": 1500.0
+      },
+      {
+        "product_id": 4,
+        "name": "Cuaderno Exito Azul",
+        "price": 5500.0,
+        "quantity": 2,
+        "subtotal": 11000.0
+      }
+    ],
+    "total": 104500.0,
+    "items_count": 11
+  },
+  {
+    "id": 5,
+    "date": "2025-10-22T20:44:20.089896",
+    "products": [
+      {
+        "product_id": 2,
+        "name": "Cuaderno Exito Verde",
+        "price": 500.0,
+        "quantity": 3,
+        "subtotal": 1500.0
+      },
+      {
+        "product_id": 8,
+        "name": "Mochilas Azul",
+        "price": 18000.0,
+        "quantity": 1,
+        "subtotal": 18000.0
+      },
+      {
+        "product_id": 4,
+        "name": "Lapiceras Bic Azules",
+        "price": 500.0,
+        "quantity": 5,
+        "subtotal": 2500.0
+      }
+    ],
+    "total": 22000.0,
+    "items_count": 9
+  },
+  {
+    "id": 6,
+    "date": "2025-10-22T21:09:28.486289",
+    "products": [
+      {
+        "product_id": 2,
+        "name": "Cuaderno Exito Verde",
+        "price": 500.0,
+        "quantity": 2,
+        "subtotal": 1000.0
+      },
+      {
+        "product_id": 8,
+        "name": "Mochilas Azul",
+        "price": 18000.0,
+        "quantity": 1,
+        "subtotal": 18000.0
+      }
+    ],
+    "total": 19000.0,
+    "items_count": 3
+  }
+]
